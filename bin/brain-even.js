@@ -1,6 +1,4 @@
-#!/usr/local/bin/env node
-import greeting from '../cli.js';
-import evenGame from '../isEven.js';
+#!/usr/bin/env node
+import brainEvenGame from '../src/brain-even.js';
 
-greeting();
-evenGame();
+brainEvenGame();
