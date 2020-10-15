@@ -5,16 +5,16 @@ const description = 'Find the greatest common divisor of given numbers';
 
 const findNODfunction = (str) => {
   const arr = str.split(' ');
-  let a = Math.abs(Number(arr[0]));
-  let b = Math.abs(Number(arr[1]));
+  const a = Math.abs(Number(arr[0]));
+  const b = Math.abs(Number(arr[1]));
 
-  if (b > a) { const temp = a; a = b; b = temp; }
-  while (true) {
-    if (b === 0) return a.toString();
-    a %= b;
-    if (a === 0) return b.toString();
-    b %= a;
-  }
+  const nod = (x, y) => {
+    if (y > x) return nod(y, x);
+    if (!y) return x;
+    return nod(y, x % y);
+  };
+
+  return String((nod(a, b)));
 };
 
 const numGenerator = () => getRandom(100);
