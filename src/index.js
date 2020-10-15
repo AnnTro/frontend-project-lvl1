@@ -25,7 +25,7 @@ const gameProcees = (description, questionFunction, testFunction) => {
       break;
     }
     if (roundCounter === 3) {
-      console.log(`Congratilations, ${userName}!`);
+      console.log(`Congratulations, ${userName}!`);
     }
   }
 };

@@ -1,9 +1,10 @@
-import gameProcees from './index.js';
+import gameProcees from '../index.js';
+import { getRandom } from '../cli.js';
 
 const description = 'What number is missing in the progression?';
 
-const numGenerator1 = () => Math.floor(1 + Math.random() * 30);
-const numGenerator2 = () => Math.floor(1 + Math.random() * 9);
+const numGenerator1 = () => getRandom(30);
+const numGenerator2 = () => getRandom(9);
 
 const generateExpression = () => {
   const firstNum = numGenerator1();
@@ -31,8 +32,10 @@ const solution = (str) => {
       return String(arr[i]);
     }
   }
+  return null;
 };
 
 const brainProgrGame = () => gameProcees(description, generateExpression, solution);
+brainProgrGame();
 
 export default brainProgrGame;

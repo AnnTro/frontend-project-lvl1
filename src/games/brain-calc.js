@@ -1,13 +1,26 @@
-import gameProcees from './index.js';
+import gameProcees from '../index.js';
+import { getRandom } from '../cli.js';
 
 const description = 'What is the result of the expression?';
 
 const operators = ['+', '-', '*'];
-const numGenerator2 = () => Math.floor(Math.random() * 100) + 1;
+const numGenerator = () => getRandom(100);
 
-const expression = () => `${numGenerator2()} ${operators[Math.floor(Math.random() * operators.length)]} ${numGenerator2()}`;
+const expression = () => `${numGenerator()} ${operators[Math.floor(Math.random() * operators.length)]} ${numGenerator()}`;
 
-const solution = (str) => eval(str).toString();
+const solution = (str) => {
+  const arr = str.split(' ');
+  switch (arr[1]) {
+    case '-':
+      return String(arr[0] - arr[2]);
+
+    case '*':
+      return String(arr[0] * arr[2]);
+
+    default:
+      return String(Number(arr[0]) + Number(arr[2]));
+  }
+};
 
 const brainCalcGame = () => gameProcees(description, expression, solution);
 

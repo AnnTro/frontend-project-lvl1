@@ -1,8 +1,9 @@
-import gameProcees from './index.js';
+import gameProcees from '../index.js';
+import { getRandom } from '../cli.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const numGenerator = () => Math.floor(Math.random() * 100) + 1;
+const numGenerator = () => getRandom(100);
 
 const expression = () => numGenerator();
 
