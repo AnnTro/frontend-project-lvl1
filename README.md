@@ -2,16 +2,16 @@
 [![Node CI](https://github.com/AnnTro/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/AnnTro/frontend-project-lvl1/actions)
 
 #### Brain-Even Game
-[![asciicast](https://asciinema.org/a/IWVs5s2Ipuw4hzk1hkCOwF2RA.svg)](https://asciinema.org/a/IWVs5s2Ipuw4hzk1hkCOwF2RA)
+[![asciicast](https://asciinema.org/a/NknvI5jCO5LSkREFRSoGtOPmZ.svg)](https://asciinema.org/a/NknvI5jCO5LSkREFRSoGtOPmZ)
 
 #### Brain-Calculator Game
-[![asciicast](https://asciinema.org/a/V4FCXktJ9apCUdPKoWpbIvkrc.svg)](https://asciinema.org/a/V4FCXktJ9apCUdPKoWpbIvkrc)
+[![asciicast](https://asciinema.org/a/viCYcKTc73rNa4fUlXb0zQsHS.svg)](https://asciinema.org/a/viCYcKTc73rNa4fUlXb0zQsHS)
 
 #### Brain-GCD Game
-[![asciicast](https://asciinema.org/a/LDQahesLm7FOTdDCSnJWeNinY.svg)](https://asciinema.org/a/LDQahesLm7FOTdDCSnJWeNinY)
+[![asciicast](https://asciinema.org/a/hdIxiR4ACxGm0WePW8W4FStCd.svg)](https://asciinema.org/a/hdIxiR4ACxGm0WePW8W4FStCd)
 
 #### Brain-Progression Game
-[![asciicast](https://asciinema.org/a/0eKcrsA2bgrlaZY8zUpqayCOV.svg)](https://asciinema.org/a/0eKcrsA2bgrlaZY8zUpqayCOV)
+[![asciicast](https://asciinema.org/a/IDFYrbwkWd9dwGocv5oAkytBU.svg)](https://asciinema.org/a/IDFYrbwkWd9dwGocv5oAkytBU)
 
 #### Brain-Prime Game
-[![asciicast](https://asciinema.org/a/olQtxrwdPLFMKBUldt186173J.svg)](https://asciinema.org/a/olQtxrwdPLFMKBUldt186173J)
+[![asciicast](https://asciinema.org/a/AMDwF4Aa2FwNkTYsn9YJnY6at.svg)](https://asciinema.org/a/AMDwF4Aa2FwNkTYsn9YJnY6at)

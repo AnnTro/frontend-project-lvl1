@@ -36,6 +36,5 @@ const solution = (str) => {
 };
 
 const brainProgrGame = () => gameProcees(description, generateExpression, solution);
-brainProgrGame();
 
 export default brainProgrGame;
