@@ -7,12 +7,13 @@ const gameProcees = (description, questionFunction, testFunction) => {
 
   console.log(description);
   const rightAnswer = 'Correct!';
+  const gameRounds = 3;
 
   // description = описание игры;
   // questionFunction = функция, которая генерирует вопрос;
   // testFunction = функция, которая выдает правильное решение на вопрос questionFunction
 
-  for (let roundCounter = 1; roundCounter <= 3; roundCounter += 1) {
+  for (let roundCounter = 1; roundCounter <= gameRounds; roundCounter += 1) {
     const currentQuestion = questionFunction();
     console.log(`Question: ${currentQuestion}`);
     const userAnswer = readlineSync.question('Your answer: ');

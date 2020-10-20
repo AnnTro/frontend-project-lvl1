@@ -1,10 +1,10 @@
 import gameProcees from '../index.js';
-import { getRandom } from '../cli.js';
+import getRandom from '../utils.js';
 
 const description = 'What is the result of the expression?';
 
 const operators = ['+', '-', '*'];
-const numGenerator = () => getRandom(100);
+const numGenerator = () => getRandom(1, 100);
 
 const expression = () => `${numGenerator()} ${operators[Math.floor(Math.random() * operators.length)]} ${numGenerator()}`;
 

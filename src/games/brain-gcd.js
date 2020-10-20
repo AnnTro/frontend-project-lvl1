@@ -1,5 +1,5 @@
 import gameProcees from '../index.js';
-import { getRandom } from '../cli.js';
+import getRandom from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers';
 
@@ -17,7 +17,7 @@ const findNODfunction = (str) => {
   return String((nod(a, b)));
 };
 
-const numGenerator = () => getRandom(100);
+const numGenerator = () => getRandom(1, 100);
 
 const expression = () => `${numGenerator()} ${numGenerator()}`;
 

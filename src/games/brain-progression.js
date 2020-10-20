@@ -1,10 +1,10 @@
 import gameProcees from '../index.js';
-import { getRandom } from '../cli.js';
+import getRandom from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
-const numGenerator1 = () => getRandom(30);
-const numGenerator2 = () => getRandom(9);
+const numGenerator1 = () => getRandom(1, 30);
+const numGenerator2 = () => getRandom(1, 9);
 
 const generateExpression = () => {
   const firstNum = numGenerator1();
