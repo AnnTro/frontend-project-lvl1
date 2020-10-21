@@ -12,12 +12,6 @@ const evenChecking = (num) => {
   return 'no';
 };
 
-const generateQandA = (gameName) => {
-  if (gameName === 'brain-even') {
-    let current 
-   }
-}
-
 const brainEvenGame = () => gameProcees(description, numGenerator, evenChecking);
 
 export default brainEvenGame;
