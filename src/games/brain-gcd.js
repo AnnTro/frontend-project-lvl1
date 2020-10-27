@@ -21,6 +21,12 @@ const numGenerator = () => getRandom(1, 100);
 
 const expression = () => `${numGenerator()} ${numGenerator()}`;
 
-const brainGcdGame = () => gameProcees(description, expression, findNODfunction);
+const generateQandA = () => {
+  const question = expression();
+  const answer = findNODfunction(question);
+  return [question, answer];
+};
+
+const brainGcdGame = () => gameProcees(generateQandA, description);
 
 export default brainGcdGame;

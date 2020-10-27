@@ -35,6 +35,12 @@ const solution = (str) => {
   return null;
 };
 
-const brainProgrGame = () => gameProcees(description, generateExpression, solution);
+const generateQandA = () => {
+  const question = generateExpression();
+  const answer = solution(question);
+  return [question, answer];
+};
+
+const brainProgrGame = () => gameProcees(generateQandA, description);
 
 export default brainProgrGame;

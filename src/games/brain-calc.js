@@ -22,6 +22,12 @@ const solution = (str) => {
   }
 };
 
-const brainCalcGame = () => gameProcees(description, expression, solution);
+const generateQandA = () => {
+  const question = expression();
+  const answer = solution(question);
+  return [question, answer];
+};
+
+const brainCalcGame = () => gameProcees(generateQandA, description);
 
 export default brainCalcGame;

@@ -12,6 +12,12 @@ const evenChecking = (num) => {
   return 'no';
 };
 
-const brainEvenGame = () => gameProcees(description, numGenerator, evenChecking);
+const generateQandA = () => {
+  const question = numGenerator();
+  const answer = evenChecking(question);
+  return [question, answer];
+};
+
+const brainEvenGame = () => gameProcees(generateQandA, description);
 
 export default brainEvenGame;

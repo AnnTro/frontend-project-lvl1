@@ -16,6 +16,12 @@ const isPrime = (num) => {
   return 'yes';
 };
 
-const brainPrimeGame = () => gameProcees(description, expression, isPrime);
+const generateQandA = () => {
+  const question = expression();
+  const answer = isPrime(question);
+  return [question, answer];
+};
+
+const brainPrimeGame = () => gameProcees(generateQandA, description);
 
 export default brainPrimeGame;
