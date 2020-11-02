@@ -3,9 +3,7 @@ import getRandom from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const numGenerator = () => getRandom(1, 100);
-
-const expression = () => numGenerator();
+const expression = () => getRandom(1, 100);
 
 const isPrime = (num) => {
   for (let i = 2; i < num; i += 1) {
@@ -16,12 +14,12 @@ const isPrime = (num) => {
   return 'yes';
 };
 
-const generateQandA = () => {
+const generateQuestionAndAnswer = () => {
   const question = expression();
   const answer = isPrime(question);
   return [question, answer];
 };
 
-const brainPrimeGame = () => gameProcees(generateQandA, description);
+const brainPrimeGame = () => gameProcees(generateQuestionAndAnswer, description);
 
 export default brainPrimeGame;

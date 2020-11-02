@@ -3,17 +3,14 @@ import getRandom from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
-const numGenerator1 = () => getRandom(1, 30);
-const numGenerator2 = () => getRandom(1, 9);
-
 const generateExpression = () => {
-  const firstNum = numGenerator1();
+  const firstNum = getRandom(1, 30);
   const progressionArray = [firstNum];
-  const progressionStep = numGenerator1();
+  const progressionStep = getRandom(1, 30);
   for (let i = 0; progressionArray.length < 10; i += 1) {
     progressionArray.push(progressionArray[i] + progressionStep);
   }
-  progressionArray[numGenerator2()] = '..';
+  progressionArray[getRandom(1, 9)] = '..';
   return progressionArray.join(' ');
 };
 
@@ -35,12 +32,12 @@ const solution = (str) => {
   return null;
 };
 
-const generateQandA = () => {
+const generateQuestionAndAnswer = () => {
   const question = generateExpression();
   const answer = solution(question);
   return [question, answer];
 };
 
-const brainProgrGame = () => gameProcees(generateQandA, description);
+const brainProgrGame = () => gameProcees(generateQuestionAndAnswer, description);
 
 export default brainProgrGame;

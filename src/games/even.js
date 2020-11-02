@@ -3,8 +3,6 @@ import getRandom from '../utils.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const numGenerator = () => getRandom(1, 100);
-
 const evenChecking = (num) => {
   if (num % 2 === 0) {
     return 'yes';
@@ -12,12 +10,12 @@ const evenChecking = (num) => {
   return 'no';
 };
 
-const generateQandA = () => {
-  const question = numGenerator();
+const generateQuestionAndAnswer = () => {
+  const question = getRandom(1, 100);
   const answer = evenChecking(question);
   return [question, answer];
 };
 
-const brainEvenGame = () => gameProcees(generateQandA, description);
+const brainEvenGame = () => gameProcees(generateQuestionAndAnswer, description);
 
 export default brainEvenGame;

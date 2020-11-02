@@ -17,16 +17,14 @@ const findNODfunction = (str) => {
   return String((nod(a, b)));
 };
 
-const numGenerator = () => getRandom(1, 100);
+const expression = () => `${getRandom(1, 100)} ${getRandom(1, 100)}`;
 
-const expression = () => `${numGenerator()} ${numGenerator()}`;
-
-const generateQandA = () => {
+const generateQuestionAndAnswer = () => {
   const question = expression();
   const answer = findNODfunction(question);
   return [question, answer];
 };
 
-const brainGcdGame = () => gameProcees(generateQandA, description);
+const brainGcdGame = () => gameProcees(generateQuestionAndAnswer, description);
 
 export default brainGcdGame;

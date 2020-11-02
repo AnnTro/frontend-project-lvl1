@@ -3,10 +3,10 @@ import getRandom from '../utils.js';
 
 const description = 'What is the result of the expression?';
 
-const operators = ['+', '-', '*'];
-const numGenerator = () => getRandom(1, 100);
-
-const expression = () => `${numGenerator()} ${operators[Math.floor(Math.random() * operators.length)]} ${numGenerator()}`;
+const expression = () => {
+  const operators = ['+', '-', '*'];
+  return `${getRandom(1, 100)} ${operators[getRandom(0, 2)]} ${getRandom(1, 100)}`;
+};
 
 const solution = (str) => {
   const arr = str.split(' ');
@@ -22,12 +22,12 @@ const solution = (str) => {
   }
 };
 
-const generateQandA = () => {
+const generateQuestionAndAnswer = () => {
   const question = expression();
   const answer = solution(question);
   return [question, answer];
 };
 
-const brainCalcGame = () => gameProcees(generateQandA, description);
+const brainCalcGame = () => gameProcees(generateQuestionAndAnswer, description);
 
 export default brainCalcGame;
