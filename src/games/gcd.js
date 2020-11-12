@@ -3,26 +3,19 @@ import getRandom from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers';
 
-const findNODfunction = (str) => {
-  const arr = str.split(' ');
-  const a = Math.abs(Number(arr[0]));
-  const b = Math.abs(Number(arr[1]));
+const generateQuestionAndAnswer = () => {
+  const firstNum = getRandom(1, 100);
+  const secondNum = getRandom(1, 100);
+
+  const question = `${firstNum} ${secondNum}`;
 
   const nod = (x, y) => {
     if (y > x) return nod(y, x);
     if (!y) return x;
-    return nod(y, x % y);
+    return String(nod(y, x % y));
   };
 
-  return String((nod(a, b)));
-};
-
-const expression = () => `${getRandom(1, 100)} ${getRandom(1, 100)}`;
-
-const generateQuestionAndAnswer = () => {
-  const question = expression();
-  const answer = findNODfunction(question);
-  return [question, answer];
+  return [question, nod(firstNum, secondNum)];
 };
 
 const brainGcdGame = () => gameProcees(generateQuestionAndAnswer, description);
