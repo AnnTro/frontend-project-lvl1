@@ -7,6 +7,9 @@ const generateQuestionAndAnswer = () => {
   const question = getRandom(1, 100);
 
   const isPrime = (num) => {
+    if (num < 2) {
+      return false;
+    }
     for (let i = 2; i < num; i += 1) {
       if (num % i === 0) {
         return false;
@@ -15,7 +18,7 @@ const generateQuestionAndAnswer = () => {
     return true;
   };
 
-  const answer = (isPrime(question)) ? 'yes' : 'no';
+  const answer = isPrime(question) ? 'yes' : 'no';
   return [question, answer];
 };
 

@@ -15,7 +15,7 @@ const generateProgression = () => {
 
 const generateQuestionAndAnswer = () => {
   const progression = generateProgression();
-  const placeOfHiddenNum = getRandom(1, 9);
+  const placeOfHiddenNum = getRandom(1, progression.length - 1);
   const answer = String(progression[placeOfHiddenNum]);
   progression[placeOfHiddenNum] = '..';
   const question = progression.join(' ');
@@ -26,3 +26,5 @@ const generateQuestionAndAnswer = () => {
 const brainProgrGame = () => gameProcees(generateQuestionAndAnswer, description);
 
 export default brainProgrGame;
+
+brainProgrGame()
