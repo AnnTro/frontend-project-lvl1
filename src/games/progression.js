@@ -26,5 +26,3 @@ const generateQuestionAndAnswer = () => {
 const brainProgrGame = () => gameProcees(generateQuestionAndAnswer, description);
 
 export default brainProgrGame;
-
-brainProgrGame()
