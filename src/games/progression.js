@@ -3,18 +3,19 @@ import getRandom from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
-const generateProgression = () => {
-  const firstNum = getRandom(1, 30);
-  const progressionArray = [firstNum];
-  const progressionStep = getRandom(1, 30);
-  for (let i = 0; progressionArray.length < 10; i += 1) {
-    progressionArray.push(progressionArray[i] + progressionStep);
+const generateProgression = (step, progression) => {
+  for (let i = 0; progression.length < 10; i += 1) {
+    progression.push(progression[i] + step);
   }
-  return progressionArray;
+  return progression;
 };
 
 const generateQuestionAndAnswer = () => {
-  const progression = generateProgression();
+  const firstNum = getRandom(1, 30);
+  const progressionArray = [firstNum];
+  const progressionStep = getRandom(1, 30);
+  const progression = generateProgression(progressionStep, progressionArray);
+
   const placeOfHiddenNum = getRandom(1, progression.length - 1);
   const answer = String(progression[placeOfHiddenNum]);
   progression[placeOfHiddenNum] = '..';
