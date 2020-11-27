@@ -3,25 +3,25 @@ import getRandom from '../utils.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const generateQuestionAndAnswer = () => {
-  const question = getRandom(1, 100);
-
-  const isPrime = (num) => {
-    if (num < 2) {
+const isPrime = (num) => {
+  if (num < 2) {
+    return false;
+  }
+  for (let i = 2; i < Math.sqrt(num); i += 1) {
+    if (num % i === 0) {
       return false;
     }
-    for (let i = 2; i < num; i += 1) {
-      if (num % i === 0) {
-        return false;
-      }
-    }
-    return true;
-  };
+  }
+  return true;
+};
+
+const generateQuestionAndAnswer = () => {
+  const question = getRandom(1, 100);
 
   const answer = isPrime(question) ? 'yes' : 'no';
   return [question, answer];
 };
 
 const brainPrimeGame = () => gameProcees(generateQuestionAndAnswer, description);
-
+brainPrimeGame();
 export default brainPrimeGame;
